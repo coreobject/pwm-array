@@ -23,11 +23,7 @@ pinMode(ledPin, OUTPUT);
 
 void loop() {
 int  total1 = touchSense();
-  if (total1 >= 600) {
-    digitalWrite(ledPin, HIGH);
-  } else {
-    digitalWrite(ledPin, LOW);
-  }
+debug();
 
   int currentTime = millis();
   if (currentTime - prevTime >= interval) {

@@ -10,3 +10,12 @@ int fade(){
   }
 }
 
+
+int debug(){
+    if (total1 >= 600) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+}
+
