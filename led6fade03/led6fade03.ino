@@ -15,15 +15,15 @@ void setup() {
   for (int thisPin = 0; thisPin < pinCount; thisPin++) {
     pinMode(leds[thisPin], OUTPUT);
   }
-pinMode(ledPin, OUTPUT);
+  pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
   Serial.println();
   Serial.println("Begin");
 }
 
 void loop() {
-int  total1 = touchSense();
-debug(total1);
+  int  total1 = touchSense();
+  debug(total1);
 
   int currentTime = millis();
   if (currentTime - prevTime >= interval) {
@@ -34,14 +34,7 @@ debug(total1);
     }
     prevTime = currentTime;
   }
-
- fade();
-
-  // display section:
-  for (int n = 0; n < 6; n++) {
-    analogWrite(leds[n], ledFade[n]);
-  }
-
-  Serial.println(total1);
+  fade();
+  display();
 }
 

@@ -19,3 +19,9 @@ int debug(int x){
   }
 }
 
+int display(){
+    for (int n = 0; n < 6; n++) {
+    analogWrite(leds[n], ledFade[n]);
+  }
+}
+
