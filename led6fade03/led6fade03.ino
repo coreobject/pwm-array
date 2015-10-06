@@ -39,14 +39,6 @@ void loop() {
       i = 0;
     }
     prevTime = currentTime;
-    /*
-     Serial.println(currentTime);
-     for (int n = 0; n < pinCount; n++) {
-       Serial.print(n + 1);
-       Serial.print("\t");
-       Serial.println(ledFade[n]);
-     }
-      */
   }
 
   if (currentTime - prevFadeTime >= fadeSpeed) {
@@ -60,28 +52,9 @@ void loop() {
 
   // display section:
   for (int n = 0; n < 6; n++) {
-    /*
-    Serial.print(n);
-    Serial.print("\t");
-    Serial.print(ledPins[n]);
-    Serial.print("\t");
-    Serial.println(ledFade[n]);
-    */
     analogWrite(leds[n], ledFade[n]);
   }
-  /*
-  Serial.print(ledFade[0]);
-        Serial.print("\t");
-    Serial.print(ledFade[1]);
-              Serial.print("\t");
-    Serial.print(ledFade[2]);
-              Serial.print("\t");
-    Serial.print(ledFade[3]);
-              Serial.print("\t");
-    Serial.print(ledFade[4]);
-              Serial.print("\t");
-    Serial.println(ledFade[5]);
-  */
+
   Serial.println(total1);
 }
 
