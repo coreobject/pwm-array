@@ -22,8 +22,6 @@ pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  long start = millis();
-  long total1 =  cs_4_2.capacitiveSensor(30);
   if (total1 >= 600) {
     digitalWrite(ledPin, HIGH);
   } else {
