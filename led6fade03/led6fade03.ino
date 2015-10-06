@@ -21,9 +21,13 @@ void setup() {
   Serial.println("Begin");
 }
 
+
+
+
 void loop() {
   int  total1 = touchSense();
   debug(total1);
+
 
   int currentTime = millis();
   if (currentTime - prevTime >= interval) {
@@ -34,7 +38,10 @@ void loop() {
     }
     prevTime = currentTime;
   }
+
+  
   fade();
+  
   display();
 }
 
