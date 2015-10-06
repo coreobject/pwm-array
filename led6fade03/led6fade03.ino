@@ -39,14 +39,7 @@ int  total1 = touchSense();
     prevTime = currentTime;
   }
 
-  if (currentTime - prevFadeTime >= fadeSpeed) {
-    for (int n = 0; n < 6; n++) {
-      if (ledFade[n] >= 1) {
-        ledFade[n] = ledFade[n] - 1;
-      }
-    }
-    prevFadeTime = currentTime;
-  }
+ fade();
 
   // display section:
   for (int n = 0; n < 6; n++) {
