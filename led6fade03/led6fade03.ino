@@ -2,16 +2,16 @@
 
 CapacitiveSensor   cs_4_2 = CapacitiveSensor(4, 2);
 int leds[] = { 3, 5, 6, 9, 10, 11};
-int ledPin = 13;
 int pinCount = 6;
 int ledFade[6];
+int ledPin = 13;
 int i;
 int prevTime;
 int interval = 500;
 int fadeSpeed = 5;
 int prevFadeTime;
-void setup() {
 
+void setup() {
   for (int thisPin = 0; thisPin < pinCount; thisPin++) {
     pinMode(leds[thisPin], OUTPUT);
   }
