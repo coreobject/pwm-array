@@ -23,7 +23,7 @@ pinMode(ledPin, OUTPUT);
 
 void loop() {
 int  total1 = touchSense();
-debug();
+debug(total1);
 
   int currentTime = millis();
   if (currentTime - prevTime >= interval) {

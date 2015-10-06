@@ -11,8 +11,8 @@ int fade(){
 }
 
 
-int debug(){
-    if (total1 >= 600) {
+int debug(int x){
+    if (x >= 600) {
     digitalWrite(ledPin, HIGH);
   } else {
     digitalWrite(ledPin, LOW);
